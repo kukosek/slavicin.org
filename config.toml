@@ -1,0 +1,43 @@
+
+baseURL = "https://slavicin.org"
+
+# The name of this wonderful theme ;-).
+theme = 'signpost'
+
+# Basic metadata configuration for your blog.
+title = "Rozcestník Slavičína"
+author = "Lukáš Dulík"
+copyright = "Copyleft Unart Slavičín."
+languageCode = "cz-CZ"
+
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = true
+
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+[permalinks]
+  blog = "/novinky/:slug/"
+  tags = "/novinky/:slug"
+
+[params]
+  # The "description" of your website. This is used in the meta data of your generated html.
+  description = "Komunitní přehled všeho dobrého ze Slavičínské internetové scény. Vaše stránky. slavicin.org."
+
+  visibleDescription = "Přehled komunitní internetové scény našeho města :)"
+
+  # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
+  # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
+  favicon = "images/favicon.png"
+
+  # These "images" are used for the structured data templates. This will show up, when
+  # services like Twitter or Slack want to generate a preview of a link to your site.
+  # See https://gohugo.io/templates/internal#twitter-cards and
+  # https://gohugo.io/templates/internal#open-graph.
+  images = ["images/share.png"]
+
+  title = "Rozcestník Slavičínského internetu"
+
+  maintainer = "Unart Slavičín"
+  maintainerLink = "https://slavicin.unart.cz/"
+  hideMaintainer = false

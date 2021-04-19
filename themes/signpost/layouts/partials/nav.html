@@ -1,0 +1,11 @@
+{{ if eq .Title "Stránky" }}
+	Stránky
+{{ else }}
+	<a href="{{ "/" | relURL }}">Stránky</a>
+{{ end }}
+
+{{ if eq .Title "Novinky" }}
+	Novinky
+{{ else }}
+	<a href="{{ "/novinky" | relURL }}">Novinky</a>
+{{ end }}

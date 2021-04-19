@@ -1,0 +1,46 @@
+{{ define "main" }}
+<content>
+	{{ .Content }}
+	{{ if .Data.Singular }}
+	<h3 style="margin-bottom:0">Filtruju pro "{{ .Title }}"</h3>
+	<small>
+	<a href="{{ "/stranky" | relURL }}" >Odstranit filtr</a>
+	</small>
+	{{ end }}
+	<ul class="site-posts">
+	{{if (eq .Title "Stránky")}}
+		{{ range where .Site.RegularPages "Section" "stranky"  }}
+			<li>
+				{{ partial "site_view.html" . }}
+			</li>
+		{{ else }}
+			<li>
+			No posts yet
+			</li>
+		{{end}}
+	{{else}}
+		{{ range (where (where .Site.RegularPages "Section" "stranky" )
+		".Params.categories" "intersect" (slice .Title) )  }}
+			<li>
+				{{ partial "site_view.html" . }}
+			</li>
+		{{ else }}
+			<li>
+			  No posts yet
+			</li>
+		{{end}}
+
+    {{ end }}
+  </ul>
+  {{ if .Data.Singular }}
+  {{else}}
+    <small>
+      <div>
+        {{ range .Site.Taxonomies.categories }}
+        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+        {{ end }}
+      </div>
+    </small>
+    {{ end }}
+</content>
+{{ end }}

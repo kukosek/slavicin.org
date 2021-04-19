@@ -1,0 +1,6 @@
+{{ if ne .Site.Params.hideMaintainer true }}
+	Tuto stránku udržuje občanské sdružení
+	<a href="{{ .Site.Params.maintainerLink }}">
+		{{ .Site.Params.maintainer }}
+	</a>
+{{ end }}
