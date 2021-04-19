@@ -19,8 +19,7 @@
 			</li>
 		{{end}}
 	{{else}}
-		{{ range (where (where .Site.RegularPages "Section" "stranky" )
-		".Params.categories" "intersect" (slice .Title) )  }}
+		{{ range (where (where .Site.RegularPages "Section" "stranky" ) ".Params.categories" "intersect" (slice .Title) )  }}
 			<li>
 				{{ partial "site_view.html" . }}
 			</li>
