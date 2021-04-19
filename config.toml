@@ -1,5 +1,5 @@
 
-baseURL = "https://slavicin.org"
+baseURL = ""
 
 # The name of this wonderful theme ;-).
 theme = 'signpost'
