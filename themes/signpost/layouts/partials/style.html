@@ -6,7 +6,15 @@ header {
 	flex-direction: column;
 }
 .siteLogo {
-	width: 300px;
+	background-image: url(/images/graphic.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	height: 200px;
+	max-width: 300px;
+	max-height: 200px;
 }
   body {
     font-family: Verdana, sans-serif;
@@ -145,6 +153,9 @@ header {
   }
 
   @media (prefers-color-scheme: dark) {
+	.siteLogo {
+		background-image: url(/images/graphic-dark.png);
+	}
     body {
       background-color: #333;
       color: #ddd;
